@@ -6,3 +6,4 @@ build/smoke.mp4
 node_modules/
 out/
 build/narration.wav
+build/seg_*/
