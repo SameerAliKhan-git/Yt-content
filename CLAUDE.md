@@ -60,16 +60,36 @@ the difference decides whether a monetised video is legal:
 | XTTS-v2 | MPL-2.0 | CPML | ❌ (and Coqui is defunct — no licence to buy) |
 | Piper *(in use)* | GPL-3.0 | MIT | ✅ GPL covers the software, **not its output** |
 
-### Narration: the owner's cloned voice
+### Narration: a human-sounding voice, never a robotic one
 
-Not a stock AI voice. **Chatterbox (MIT, clones from a short sample)** is the
-chosen route. Needs a one-time clean recording from the channel owner in
+**Default: Kokoro** (`--engine kokoro`), Apache-2.0, 54 voices, runs on CPU
+faster than realtime. This is the channel voice unless told otherwise.
+
+```bash
+/tmp/ttsenv/bin/python video/tts.py --script script/<name>.json \
+  --engine kokoro --kokoro-voice bm_george --wpm 160 \
+  --out-wav build/narration.wav --out-timing build/timing.json
+```
+
+Weights: `kokoro-v1.0.onnx` + `voices-v1.0.bin` from the kokoro-onnx releases
+(~350 MB, not committed). Install with `pip install kokoro-onnx soundfile` —
+**use `kokoro-onnx`, not `kokoro`**, which pulls a spacy build that fails here.
+
+Pace is calibrated per-script, not per-sentence: a generic probe mis-estimates
+badly (204 wpm probe vs 142 wpm actual), so calibration samples the real script
+and lands within ~1 wpm of target.
+
+### Later: the owner's cloned voice
+
+If the owner supplies a sample, **Chatterbox (MIT code + MIT weights, clones
+from ~5s)** is the route. Its install stalled in this container (large torch
+tree) — retry when needed. Needs a one-time clean recording from the channel owner in
 `assets/voice/` — 2–5 min, documentary delivery, quiet room, WAV/FLAC ≥24 kHz,
 no noise reduction applied.
 
-Until that sample exists, Piper remains the scratch voice. **The timeline is
-built from measured narration either way**, so swapping the voice does not
-break sync — only re-run `video/tts.py` and re-derive.
+Until that sample exists, **Kokoro is the voice** (Piper is only a fast scratch
+option). **The timeline is built from measured narration either way**, so
+swapping voices never breaks sync — re-run `video/tts.py` and re-derive.
 
 ### Monetisation: don't become the thing being demonetised
 
