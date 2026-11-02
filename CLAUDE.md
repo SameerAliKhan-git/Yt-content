@@ -3,6 +3,38 @@
 A pipeline for producing Vox-style animated explainer videos for a **faceless
 YouTube channel**. Read this before starting a new video.
 
+## Channel niche
+
+Explainers **only** in these lanes:
+
+- **Tech** (how a technology actually works, who controls it, why it matters)
+- **International relations**
+- **Global affairs**
+- **Geopolitics**
+- Adjacent **trending topics** in the above
+
+Turn down ideas outside these lanes rather than stretching the channel.
+
+### What this niche demands
+
+1. **Fact-check exposure is high.** Geopolitics and global-affairs audiences
+   argue with numbers in the comments. `script/FACTCHECK.md` is the required
+   pattern for every video: each figure sourced, confidence-rated, contested
+   ranges hedged *on screen*, and an explicit record of claims cut for being
+   unsourceable. Never quietly assert a contested figure.
+2. **Model estimates are not forecasts.** Anything from a scenario model
+   (war/blockade costs, GDP impacts, projections) must be labelled as modelled,
+   with the method named, and competing estimates not presented as comparable
+   when they measure different things.
+3. **Shelf life is a design decision.** A news-pegged video dies in weeks; a
+   mechanism-led one ("why this chokepoint exists") keeps earning for years.
+   Prefer the durable framing and use the news hook in the cold open only.
+4. **Maps and real geography carry these topics.** Natural Earth 10m plus real
+   coordinates is the backbone — see the asset notes below.
+5. **No contested-border guesswork.** Disputed territory is an editorial
+   decision, not a default: state the convention used on screen when a map
+   touches a live dispute.
+
 > The semiconductor/"Chokepoint" video in `script/` is **abandoned** — kept only
 > as a worked reference for the pipeline. Do not resume it unless asked.
 
