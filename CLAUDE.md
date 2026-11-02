@@ -40,6 +40,47 @@ Turn down ideas outside these lanes rather than stretching the channel.
 
 ---
 
+## Hard constraints
+
+### Free tools only
+
+**Everything must be free.** No paid tools, no paid tiers, no subscriptions.
+When a tool is needed, find the best freely-licensed alternative. Current stack
+is already fully free — see `research/FREE_STACK.md` for the researched
+alternatives and the licence traps.
+
+**Check the licence of model *weights*, not just the code.** They differ, and
+the difference decides whether a monetised video is legal:
+
+| | code | weights | commercial |
+|---|---|---|---|
+| Chatterbox | MIT | MIT | ✅ |
+| OpenVoice V2 | MIT | MIT | ✅ |
+| F5-TTS | MIT | **cc-by-nc-4.0** | ❌ **trap — widely mis-recommended as MIT** |
+| XTTS-v2 | MPL-2.0 | CPML | ❌ (and Coqui is defunct — no licence to buy) |
+| Piper *(in use)* | GPL-3.0 | MIT | ✅ GPL covers the software, **not its output** |
+
+### Narration: the owner's cloned voice
+
+Not a stock AI voice. **Chatterbox (MIT, clones from a short sample)** is the
+chosen route. Needs a one-time clean recording from the channel owner in
+`assets/voice/` — 2–5 min, documentary delivery, quiet room, WAV/FLAC ≥24 kHz,
+no noise reduction applied.
+
+Until that sample exists, Piper remains the scratch voice. **The timeline is
+built from measured narration either way**, so swapping the voice does not
+break sync — only re-run `video/tts.py` and re-derive.
+
+### Monetisation: don't become the thing being demonetised
+
+YouTube's "inauthentic content" rule (July 2025) targets **mass-produced,
+templated content with no original value added** — not AI use as such. This
+channel's defence is that every video has an original researched script, a
+fact-check trail, original code-generated artwork and real human analysis.
+The moment it becomes "same template, new topic", it walks into the policy.
+
+---
+
 ## How a video gets made
 
 The governing principle: **audio first, everything derived from it.**
