@@ -1,0 +1,807 @@
+1
+00:00:00,550 --> 00:00:05,310
+In a quiet town in the Netherlands, there
+is a machine about the size of a bus.
+
+2
+00:00:05,490 --> 00:00:10,852
+It is assembled from roughly a hundred
+thousand parts, sourced from more than
+
+3
+00:00:10,852 --> 00:00:13,327
+five thousand suppliers across twenty-nine
+countries.
+
+4
+00:00:13,507 --> 00:00:17,977
+It ships in two hundred and fifty crates,
+and it takes months to install.
+
+5
+00:00:18,157 --> 00:00:21,512
+Exactly one company on Earth knows how to
+build it.
+
+6
+00:00:21,692 --> 00:00:26,949
+And without it, the most advanced computer
+chips in the world do not get made. Not in
+
+7
+00:00:26,949 --> 00:00:28,495
+America. Not in China. Nowhere.
+
+8
+00:00:28,675 --> 00:00:33,645
+This is the story of the narrowest
+bottleneck in the global economy, and why,
+
+9
+00:00:33,645 --> 00:00:37,905
+after hundreds of billions of dollars,
+nobody has managed to widen it.
+
+10
+00:00:40,555 --> 00:00:45,584
+To understand why that machine matters,
+you have to understand what a modern chip
+
+11
+00:00:45,584 --> 00:00:46,302
+actually is.
+
+12
+00:00:46,482 --> 00:00:52,191
+Inside the phone in your pocket is a piece
+of silicon about the size of a fingernail.
+
+13
+00:00:52,191 --> 00:00:55,213
+Printed onto it are more than fifteen
+billion transistors.
+
+14
+00:00:55,513 --> 00:01:00,666
+A transistor is just a switch. It lets
+current through, or it doesn't. That's the
+
+15
+00:01:00,666 --> 00:01:01,353
+whole trick.
+
+16
+00:01:01,533 --> 00:01:06,972
+Wire enough of them together and you get
+arithmetic. Then logic. Then memory. Then
+
+17
+00:01:06,972 --> 00:01:07,361
+everything.
+
+18
+00:01:07,661 --> 00:01:12,466
+And the entire history of computing is one
+move, repeated: make the switches smaller,
+
+19
+00:01:12,466 --> 00:01:16,241
+so you can fit more of them in the same
+space.
+
+20
+00:01:16,421 --> 00:01:22,849
+In 1971, the features were ten thousand
+nanometers across. Today the leading edge
+
+21
+00:01:22,849 --> 00:01:24,826
+is called three nanometer.
+
+22
+00:01:25,006 --> 00:01:29,858
+That name is now mostly marketing, but the
+real structures are only a few dozen atoms
+
+23
+00:01:29,858 --> 00:01:30,161
+wide.
+
+24
+00:01:30,511 --> 00:01:35,341
+At that scale you are not really
+manufacturing any more. You are doing
+
+25
+00:01:35,341 --> 00:01:39,799
+applied physics, trillions of times a
+month, with almost no mistakes allowed.
+
+26
+00:01:39,979 --> 00:01:41,488
+And the way you do it is with light.
+
+27
+00:01:41,888 --> 00:01:44,640
+Chips are printed, a little like
+photographs.
+
+28
+00:01:44,820 --> 00:01:50,712
+You take a blueprint of the circuit,
+called a mask, shine light through it, and
+
+29
+00:01:50,712 --> 00:01:54,247
+project the pattern onto silicon coated in
+light-sensitive chemicals.
+
+30
+00:01:54,427 --> 00:01:59,818
+Wash away what the light touched. Etch
+what's left. Then do it again. Eighty, a
+
+31
+00:01:59,818 --> 00:02:01,974
+hundred times over, layer on layer.
+
+32
+00:02:02,274 --> 00:02:05,679
+The catch is that you cannot print a
+feature much smaller than the wavelength
+
+33
+00:02:05,679 --> 00:02:07,138
+of the light you print with.
+
+34
+00:02:07,318 --> 00:02:12,642
+For decades the industry used deep
+ultraviolet light, at a hundred and
+
+35
+00:02:12,642 --> 00:02:13,530
+ninety-three nanometers.
+
+36
+00:02:13,830 --> 00:02:18,287
+And for a long time, clever tricks kept
+that going. Shooting the light through
+
+37
+00:02:18,287 --> 00:02:19,879
+water to bend it tighter.
+
+38
+00:02:20,059 --> 00:02:25,546
+Exposing the same wafer two, three, four
+times with slightly offset masks, to draw
+
+39
+00:02:25,546 --> 00:02:28,290
+lines finer than the light should allow.
+
+40
+00:02:28,470 --> 00:02:34,088
+But every trick costs money, time, and
+yield. By the twenty-tens, the industry
+
+41
+00:02:34,088 --> 00:02:36,249
+needed shorter light. Much shorter.
+
+42
+00:02:36,549 --> 00:02:41,077
+The answer was thirteen point five
+nanometers. Extreme ultraviolet.
+
+43
+00:02:41,257 --> 00:02:46,231
+And here is the problem with extreme
+ultraviolet: almost nothing reflects it,
+
+44
+00:02:46,231 --> 00:02:48,304
+and almost everything absorbs it.
+
+45
+00:02:48,484 --> 00:02:54,088
+Glass absorbs it. Air absorbs it. You
+cannot use a lens. You cannot even use an
+
+46
+00:02:54,088 --> 00:02:54,788
+ordinary mirror.
+
+47
+00:02:54,968 --> 00:02:57,534
+So this is what had to be built instead.
+
+48
+00:02:57,834 --> 00:03:02,823
+A stream of molten tin droplets falls
+through a vacuum chamber. About fifty
+
+49
+00:03:02,823 --> 00:03:04,742
+thousand of them, every second.
+
+50
+00:03:04,922 --> 00:03:09,856
+Each droplet is hit by a high-power carbon
+dioxide laser. Twice.
+
+51
+00:03:10,036 --> 00:03:15,163
+The first pulse flattens it into a
+pancake. The second vaporises it into a
+
+52
+00:03:15,163 --> 00:03:18,825
+plasma hot enough to glow at thirteen
+point five nanometers.
+
+53
+00:03:19,125 --> 00:03:23,838
+That light is gathered not by lenses but
+by mirrors, and not ordinary mirrors
+
+54
+00:03:23,838 --> 00:03:24,175
+either.
+
+55
+00:03:24,355 --> 00:03:29,414
+They are built from dozens of alternating
+layers of molybdenum and silicon, each
+
+56
+00:03:29,414 --> 00:03:35,251
+only a few atoms thick, tuned so the weak
+reflections add up instead of cancelling
+
+57
+00:03:35,251 --> 00:03:35,640
+out.
+
+58
+00:03:35,820 --> 00:03:40,701
+Even so, each mirror returns only about
+seventy percent of the light that hits it.
+
+59
+00:03:40,701 --> 00:03:46,883
+Put ten in a row and most of your beam is
+gone, so the source has to be brutally
+
+60
+00:03:46,883 --> 00:03:47,860
+overpowered to compensate.
+
+61
+00:03:48,160 --> 00:03:52,516
+The mirrors are ground in Germany to a
+precision that is genuinely hard to
+
+62
+00:03:52,516 --> 00:03:52,827
+picture.
+
+63
+00:03:53,007 --> 00:03:57,521
+The manufacturer's own comparison: scale
+one of these mirrors up to the size of
+
+64
+00:03:57,521 --> 00:04:02,358
+Germany, and the largest bump on its
+surface would be about a tenth of a
+
+65
+00:04:02,358 --> 00:04:03,003
+millimetre tall.
+
+66
+00:04:03,353 --> 00:04:08,232
+All of it sits in a vacuum, on a stage
+that moves the wafer at speed while
+
+67
+00:04:08,232 --> 00:04:10,528
+holding position to a fraction of a
+nanometer.
+
+68
+00:04:10,708 --> 00:04:15,642
+And it is expected to run, profitably,
+around the clock, for years.
+
+69
+00:04:15,822 --> 00:04:20,559
+The newest generation reportedly sells for
+over three hundred and fifty million
+
+70
+00:04:20,559 --> 00:04:25,691
+euros. Fabs buy them anyway, because the
+alternative is not competing at all.
+
+71
+00:04:25,991 --> 00:04:29,683
+This is why there is only one supplier. It
+isn't a patent.
+
+72
+00:04:29,863 --> 00:04:34,886
+It is thirty years of accumulated, mostly
+undocumented practical knowledge, spread
+
+73
+00:04:34,886 --> 00:04:40,822
+across thousands of specialised firms,
+each of which is itself hard to replace.
+
+74
+00:04:41,002 --> 00:04:44,741
+You cannot buy that. You cannot really
+steal it. You have to grow it.
+
+75
+00:04:45,141 --> 00:04:48,276
+But having the machine is not the same as
+being able to use it.
+
+76
+00:04:48,456 --> 00:04:52,322
+Which brings us to the second chokepoint,
+and this one is on an island.
+
+77
+00:04:52,502 --> 00:04:57,149
+Until the nineteen-eighties, if you
+designed chips, you also built them.
+
+78
+00:04:57,149 --> 00:05:00,106
+Designers and factories lived under one
+roof.
+
+79
+00:05:00,286 --> 00:05:06,364
+Then in nineteen eighty-seven, a Taiwanese
+company made a strange bet. It would build
+
+80
+00:05:06,364 --> 00:05:11,574
+chips and only build chips, never
+designing anything that competed with its
+
+81
+00:05:11,574 --> 00:05:12,442
+own customers.
+
+82
+00:05:12,742 --> 00:05:18,170
+That company was TSMC, and the bet
+reorganised the whole industry. Designers
+
+83
+00:05:18,170 --> 00:05:24,503
+like Apple, Nvidia, Qualcomm and AMD could
+now exist without owning a single factory.
+
+84
+00:05:24,683 --> 00:05:31,625
+The result: the hardest part of the supply
+chain collapsed into very few hands. By
+
+85
+00:05:31,625 --> 00:05:36,717
+twenty twenty-five, TSMC held roughly
+seventy percent of the entire contract
+
+86
+00:05:36,717 --> 00:05:38,568
+chipmaking market by revenue.
+
+87
+00:05:38,748 --> 00:05:43,656
+At the leading edge the concentration is
+sharper still. Samsung has fought with
+
+88
+00:05:43,656 --> 00:05:48,941
+yields. Intel spent years behind. For the
+most advanced chips on Earth, there is
+
+89
+00:05:48,941 --> 00:05:50,451
+effectively one real option.
+
+90
+00:05:50,751 --> 00:05:55,151
+And the reason is boring, which is exactly
+what makes it so hard to beat. Yield.
+
+91
+00:05:55,331 --> 00:06:01,839
+Every fab loses some chips to defects. If
+your rival gets eighty good chips from a
+
+92
+00:06:01,839 --> 00:06:07,127
+wafer and you get fifty, you lose. Same
+machines, same design, same everything.
+
+93
+00:06:07,307 --> 00:06:12,098
+Yield comes from running millions of
+wafers and fixing thousands of tiny
+
+94
+00:06:12,098 --> 00:06:18,086
+problems you only find by running millions
+of wafers. It is a flywheel: volume buys
+
+95
+00:06:18,086 --> 00:06:19,683
+learning, learning buys volume.
+
+96
+00:06:19,863 --> 00:06:25,601
+TSMC has been spinning that flywheel for
+nearly forty years, mostly within a few
+
+97
+00:06:25,601 --> 00:06:28,060
+dozen miles of Taiwan's west coast.
+
+98
+00:06:28,360 --> 00:06:34,556
+In twenty twenty, the world ran a small,
+accidental experiment in what happens when
+
+99
+00:06:34,556 --> 00:06:35,883
+this system hiccups.
+
+100
+00:06:36,063 --> 00:06:40,643
+When the pandemic hit, carmakers cancelled
+their chip orders. Consumer electronics
+
+101
+00:06:40,643 --> 00:06:45,639
+demand exploded and took the freed-up
+capacity. When the carmakers came back,
+
+102
+00:06:45,639 --> 00:06:48,138
+the queue had closed behind them.
+
+103
+00:06:48,318 --> 00:06:54,169
+These were not advanced chips. Many were
+cheap, old, unglamorous parts. It made no
+
+104
+00:06:54,169 --> 00:06:54,587
+difference.
+
+105
+00:06:54,767 --> 00:06:59,112
+By the end of twenty twenty-one, the
+consultancy AlixPartners estimated the
+
+106
+00:06:59,112 --> 00:07:04,643
+shortage would cost the car industry two
+hundred and ten billion dollars in lost
+
+107
+00:07:04,643 --> 00:07:09,384
+revenue, and about seven point seven
+million vehicles that were simply never
+
+108
+00:07:09,384 --> 00:07:09,779
+built.
+
+109
+00:07:09,959 --> 00:07:14,849
+Lead times stretched past twenty weeks.
+Assembly lines sat idle, waiting on
+
+110
+00:07:14,849 --> 00:07:18,109
+components worth less than a cup of
+coffee.
+
+111
+00:07:18,289 --> 00:07:23,525
+That was the system working, more or less.
+Just with the timing slightly off.
+
+112
+00:07:23,825 --> 00:07:26,042
+So: what if the island stopped?
+
+113
+00:07:26,222 --> 00:07:30,328
+The estimates here carry enormous
+uncertainty, and anyone who tells you
+
+114
+00:07:30,328 --> 00:07:33,688
+otherwise is selling something. But they
+are not small.
+
+115
+00:07:33,868 --> 00:07:39,632
+Rhodium Group put over two trillion
+dollars of annual economic activity at
+
+116
+00:07:39,632 --> 00:07:44,436
+risk in a blockade scenario, before
+counting sanctions, escalation, or
+
+117
+00:07:44,436 --> 00:07:45,396
+knock-on effects.
+
+118
+00:07:45,576 --> 00:07:51,188
+Bloomberg Economics modelled a year-long
+blockade and got roughly five percent off
+
+119
+00:07:51,188 --> 00:07:56,333
+global output, around five trillion
+dollars, with Taiwan down twelve percent,
+
+120
+00:07:56,333 --> 00:08:00,542
+China down nearly nine, the United States
+down three.
+
+121
+00:08:00,722 --> 00:08:04,460
+For a full war, their figure was closer to
+ten trillion.
+
+122
+00:08:04,640 --> 00:08:09,683
+For scale: the two thousand eight
+financial crisis took a little over three
+
+123
+00:08:09,683 --> 00:08:11,235
+percent off global output.
+
+124
+00:08:11,584 --> 00:08:15,137
+And unlike oil, you cannot stockpile your
+way out of this.
+
+125
+00:08:15,317 --> 00:08:20,340
+A chip design is tied to one factory's
+specific process. You cannot take the
+
+126
+00:08:20,340 --> 00:08:22,492
+blueprint somewhere else and press print.
+
+127
+00:08:22,892 --> 00:08:27,809
+So for the past few years, governments
+have been trying to fix this. Two
+
+128
+00:08:27,809 --> 00:08:29,916
+strategies, running at the same time.
+
+129
+00:08:30,096 --> 00:08:33,092
+Strategy one: build it somewhere else.
+
+130
+00:08:33,272 --> 00:08:38,875
+In twenty twenty-two the United States
+passed the CHIPS and Science Act. Around
+
+131
+00:08:38,875 --> 00:08:43,185
+fifty-three billion dollars, of which
+roughly thirty-nine billion was direct
+
+132
+00:08:43,185 --> 00:08:47,064
+manufacturing incentives, plus tens of
+billions in lending authority.
+
+133
+00:08:47,244 --> 00:08:52,721
+Europe, Japan, South Korea, India and
+China have all announced versions of the
+
+134
+00:08:52,721 --> 00:08:59,041
+same idea. TSMC is building in Arizona and
+Japan. Intel and Samsung are expanding in
+
+135
+00:08:59,041 --> 00:09:00,305
+the United States.
+
+136
+00:09:00,605 --> 00:09:03,392
+Strategy two: stop the competition.
+
+137
+00:09:03,572 --> 00:09:07,764
+In October twenty twenty-two, the United
+States introduced sweeping export controls
+
+138
+00:09:07,764 --> 00:09:13,861
+designed to cut China off from advanced
+chips and the tools that make them. A year
+
+139
+00:09:13,861 --> 00:09:16,529
+later the rules were tightened and
+widened.
+
+140
+00:09:16,709 --> 00:09:21,120
+An EUV machine has never been allowed to
+be sold to China. Not one.
+
+141
+00:09:21,420 --> 00:09:22,755
+So how is it going?
+
+142
+00:09:22,935 --> 00:09:28,150
+Partly. Fabs genuinely are being built,
+and some are producing. But the fab is the
+
+143
+00:09:28,150 --> 00:09:28,845
+easy part.
+
+144
+00:09:29,025 --> 00:09:34,674
+What's hard to move is everything around
+it. The specialty chemical suppliers. The
+
+145
+00:09:34,674 --> 00:09:38,150
+equipment service engineers. The packaging
+and testing plants.
+
+146
+00:09:38,330 --> 00:09:43,252
+And the particular culture of a workforce
+that will shut down and restart a
+
+147
+00:09:43,252 --> 00:09:47,119
+two-billion-dollar line at three in the
+morning because one sensor drifted.
+
+148
+00:09:47,299 --> 00:09:52,627
+And underneath every one of these plans,
+in Arizona and Dresden and Kumamoto alike,
+
+149
+00:09:52,627 --> 00:09:57,574
+sits the same machine, from the same
+company, in the same Dutch town.
+
+150
+00:09:57,754 --> 00:10:02,789
+Diversifying the factories does not
+diversify the chokepoint. It just gives it
+
+151
+00:10:02,789 --> 00:10:03,629
+more customers.
+
+152
+00:10:03,929 --> 00:10:08,027
+Meanwhile the controls have had an effect,
+but not a clean one.
+
+153
+00:10:08,207 --> 00:10:13,683
+In twenty twenty-three, Huawei shipped a
+phone with a seven-nanometer-class chip
+
+154
+00:10:13,683 --> 00:10:20,155
+built by China's SMIC, without EUV, using
+older machines and many more exposure
+
+155
+00:10:20,155 --> 00:10:20,653
+passes.
+
+156
+00:10:20,833 --> 00:10:25,957
+Analysts believe the yields are poor and
+the costs high. But it exists. Impossible
+
+157
+00:10:25,957 --> 00:10:27,787
+turned out to mean expensive.
+
+158
+00:10:27,967 --> 00:10:32,153
+Which is the uncomfortable thing about
+chokepoints. Squeezing one does not only
+
+159
+00:10:32,153 --> 00:10:35,641
+stop your rival. It tells them exactly
+where to dig.
+
+160
+00:10:36,041 --> 00:10:40,937
+None of this happened because of a
+conspiracy, or a failure. It happened
+
+161
+00:10:40,937 --> 00:10:42,067
+because of specialisation.
+
+162
+00:10:42,247 --> 00:10:47,021
+Every step — splitting design from
+manufacturing, buying the one best
+
+163
+00:10:47,021 --> 00:10:52,229
+machine, clustering the factories where
+the expertise already was — made chips
+
+164
+00:10:52,229 --> 00:10:57,003
+cheaper and better, faster than almost
+anything humans have ever built.
+
+165
+00:10:57,183 --> 00:11:02,118
+The fragility was not the price of getting
+it wrong. It was the price of getting it
+
+166
+00:11:02,118 --> 00:11:02,698
+relentlessly right.
+
+167
+00:11:02,878 --> 00:11:07,819
+We built the most sophisticated supply
+chain in history, and we optimised it
+
+168
+00:11:07,819 --> 00:11:11,620
+until there was almost no slack left
+anywhere in it.
+
+169
+00:11:11,800 --> 00:11:17,440
+And now the whole digital world balances
+on a few thousand people in Taiwan, a few
+
+170
+00:11:17,440 --> 00:11:22,728
+hundred in a Dutch town, and a stream of
+tin droplets falling through a vacuum,
+
+171
+00:11:22,728 --> 00:11:24,490
+fifty thousand times a second.

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Thumbnails</title>
+<style>
+  @font-face { font-family:"Anton";           src:url("../fonts/anton.woff2") format("woff2");          font-weight:400; font-display:block; }
+  @font-face { font-family:"ArchivoBlack";    src:url("../fonts/archivo-black.woff2") format("woff2");   font-weight:400; font-display:block; }
+  @font-face { font-family:"BarlowCondensed"; src:url("../fonts/barlow-cond-700.woff2") format("woff2"); font-weight:700; font-display:block; }
+  @font-face { font-family:"Inter";           src:url("../fonts/inter-700.woff2") format("woff2");       font-weight:700; font-display:block; }
+  html,body{margin:0;background:#111;overflow:hidden}
+  #t{display:block;width:1280px;height:720px}
+</style>
+<script src="./vendor/topojson-client.min.js"></script>
+</head>
+<body>
+<canvas id="t" width="1280" height="720"></canvas>
+<script type="module">
+import { C, F, font } from './lib/theme.js';
+import { hexA, clamp, lerp } from './lib/anim.js';
+import { text, roundRect, drawFeature, makeProj, circleHL, measure } from './lib/draw.js';
+
+const cv = document.getElementById('t');
+const g = cv.getContext('2d', { alpha: false });
+const TW = 1280, TH = 720;
+let GEO = null;
+
+/** Heavy condensed line, auto-fitted to a width. */
+function fit(str, maxW, size, fam = 'Anton', weight = 400, track = 2) {
+  let s = size;
+  while (s > 10 && measure(g, str, s, fam, weight, track) > maxW) s -= 2;
+  return s;
+}
+
+function variantA() {
+  // dark, the machine, maximum contrast
+  g.fillStyle = '#0D0B09'; g.fillRect(0, 0, TW, TH);
+  // plasma glow behind
+  const grd = g.createRadialGradient(TW * 0.78, TH * 0.52, 10, TW * 0.78, TH * 0.52, 420);
+  grd.addColorStop(0, hexA(C.yellow, 0.55));
+  grd.addColorStop(0.45, hexA(C.yellow, 0.14));
+  grd.addColorStop(1, hexA(C.yellow, 0));
+  g.fillStyle = grd; g.fillRect(0, 0, TW, TH);
+
+  // schematic machine block, right side
+  g.save();
+  g.translate(TW * 0.76, TH * 0.52);
+  const mods = [[-210, -60, 110, 150], [-90, -105, 125, 215], [55, -130, 140, 250], [205, -55, 110, 150]];
+  mods.forEach(([x, y, w, h], i) => {
+    g.fillStyle = i % 2 ? '#4A4136' : '#362F26';
+    roundRect(g, x, y, w, h, 7); g.fill();
+    g.strokeStyle = hexA('#F6F2EA', 0.5); g.lineWidth = 3;
+    roundRect(g, x, y, w, h, 7); g.stroke();
+    // top highlight so the forms read as solid objects
+    g.fillStyle = hexA('#F6F2EA', 0.13);
+    roundRect(g, x + 6, y + 6, w - 12, 16, 4); g.fill();
+  });
+  // beam
+  g.strokeStyle = C.yellow; g.lineWidth = 7; g.setLineDash([20, 14]);
+  g.beginPath(); g.moveTo(-150, 0); g.lineTo(-20, 0); g.lineTo(-20, -70);
+  g.lineTo(120, -70); g.lineTo(120, 40); g.lineTo(255, 40); g.stroke();
+  g.setLineDash([]);
+  g.beginPath(); g.arc(-150, 0, 16, 0, 7); g.fillStyle = C.yellow; g.fill();
+  g.restore();
+
+  // type block, left — the whole point of the thumbnail
+  const x = 64;
+  text(g, 'ONLY ONE EXISTS', x, 150, {
+    size: 34, fam: F.label, weight: 700, fill: C.red, caps: true, track: 4,
+  });
+  let s1 = fit('ONE MACHINE', 640, 126);
+  text(g, 'ONE MACHINE', x, 290, { size: s1, fam: 'Anton', fill: '#F6F2EA', caps: true, track: 2 });
+  let s2 = fit('RUNS THE', 640, 126);
+  text(g, 'RUNS THE', x, 410, { size: s2, fam: 'Anton', fill: '#F6F2EA', caps: true, track: 2 });
+  let s3 = fit('WHOLE WORLD', 640, 126);
+  // highlight slab behind the payoff words
+  const w3 = measure(g, 'WHOLE WORLD', s3, 'Anton', 400, 2);
+  g.fillStyle = C.red; roundRect(g, x - 14, 440, w3 + 34, 112, 6); g.fill();
+  text(g, 'WHOLE WORLD', x, 530, { size: s3, fam: 'Anton', fill: '#FFFFFF', caps: true, track: 2 });
+
+  text(g, 'AND IT IS BUILT IN ONE DUTCH TOWN', x, 632, {
+    size: 29, fam: F.label, weight: 700, fill: hexA('#F6F2EA', 0.72), caps: true, track: 3,
+  });
+}
+
+function variantB() {
+  // cream, the island, geopolitical urgency
+  g.fillStyle = C.bg; g.fillRect(0, 0, TW, TH);
+  if (GEO) {
+    const proj = makeProj({ scale: 6600, cx: 121.3, cy: 24.4, ox: TW * 0.845, oy: TH * 0.47, w: TW, h: TH });
+    drawFeature(g, GEO.land, proj, { fill: hexA(C.ink, 0.12) });
+    const tw_ = GEO.byName['Taiwan'];
+    if (tw_) drawFeature(g, tw_, proj, { fill: C.red, stroke: '#8E2212', width: 4 });
+    const [tx, ty] = proj(120.95, 23.75);
+    circleHL(g, tx, ty, 112, 165, { color: C.red, width: 9, prog: 1 });
+  }
+  const x = 60;
+  text(g, 'IF THIS ISLAND STOPS', x, 136, {
+    size: 32, fam: F.label, weight: 700, fill: C.red, caps: true, track: 3.6,
+  });
+  const s1 = fit('THE WORLD', 600, 128);
+  text(g, 'THE WORLD', x, 278, { size: s1, fam: 'Anton', fill: C.ink, caps: true, track: 2 });
+  const s2 = fit('LOSES', 600, 128);
+  text(g, 'LOSES', x, 398, { size: s2, fam: 'Anton', fill: C.ink, caps: true, track: 2 });
+  // the number, slabbed
+  const s3 = fit('$5 TRILLION', 540, 118);
+  const w3 = measure(g, '$5 TRILLION', s3, 'ArchivoBlack', 400, 0);
+  g.fillStyle = C.ink; roundRect(g, x - 16, 428, w3 + 36, 118, 6); g.fill();
+  text(g, '$5 TRILLION', x, 520, { size: s3, fam: 'ArchivoBlack', fill: C.yellow });
+  text(g, 'MODELLED BLOCKADE SCENARIO · BLOOMBERG ECONOMICS', x, 628, {
+    size: 23, fam: F.label, weight: 700, fill: C.inkSoft, caps: true, track: 2.4,
+  });
+}
+
+const VARIANTS = { a: variantA, b: variantB };
+
+async function boot() {
+  await Promise.all([
+    document.fonts.load('400 100px Anton', 'ABC'),
+    document.fonts.load('400 100px ArchivoBlack', '$509'),
+    document.fonts.load('700 100px BarlowCondensed', 'ABC'),
+    document.fonts.load('700 100px Inter', 'ABC'),
+  ]);
+  await document.fonts.ready;
+  const topo = await fetch('./data/countries-50m.json').then(r => r.json());
+  const countries = topojson.feature(topo, topo.objects.countries);
+  const byName = {};
+  countries.features.forEach(f => { if (f.properties?.name) byName[f.properties.name] = f; });
+  GEO = { land: topojson.feature(topo, topo.objects.land), byName };
+  window.THUMB = { draw(v) { VARIANTS[v](); return true; } };
+  window.THUMB_READY = true;
+}
+boot().catch(e => { window.THUMB_ERROR = String(e && e.stack || e); });
+</script>
+</body>
+</html>

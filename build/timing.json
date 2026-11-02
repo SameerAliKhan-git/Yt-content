@@ -1,0 +1,1088 @@
+{
+ "fps": 30,
+ "sampleRate": 22050,
+ "shots": [
+  {
+   "id": "cold_machine",
+   "type": "coldopen_machine",
+   "act": "COLD OPEN",
+   "start": 0.5499773242630386,
+   "lines": [
+    {
+     "i": 0,
+     "text": "In a quiet town in the Netherlands, there is a machine about the size of a bus.",
+     "cue": "silhouette fades up from black, scale bar draws",
+     "start": 0.5499773242630386,
+     "end": 5.3100680272108844,
+     "dur": 4.760090702947846,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "It is assembled from roughly a hundred thousand parts, sourced from more than five thousand suppliers across twenty-nine countries.",
+     "cue": "parts fly in and assemble; counters tick",
+     "start": 5.490068027210884,
+     "end": 13.326802721088436,
+     "dur": 7.836734693877552,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "It ships in two hundred and fifty crates, and it takes months to install.",
+     "cue": "crates stack, calendar strip",
+     "start": 13.506802721088436,
+     "end": 17.976643990929706,
+     "dur": 4.46984126984127,
+     "silent": false
+    },
+    {
+     "i": 3,
+     "text": "Exactly one company on Earth knows how to build it.",
+     "cue": "all competitor logos grey out except one",
+     "start": 18.156643990929705,
+     "end": 21.511927437641724,
+     "dur": 3.3552834467120185,
+     "silent": false
+    },
+    {
+     "i": 4,
+     "text": "And without it, the most advanced computer chips in the world do not get made. Not in America. Not in China. Nowhere.",
+     "cue": "world map, every region goes dark one by one",
+     "start": 21.691927437641723,
+     "end": 28.495374149659863,
+     "dur": 6.80344671201814,
+     "silent": false
+    },
+    {
+     "i": 5,
+     "text": "This is the story of the narrowest bottleneck in the global economy, and why, after hundreds of billions of dollars, nobody has managed to widen it.",
+     "cue": "pipeline narrows to a single thin line",
+     "start": 28.675374149659863,
+     "end": 37.90530612244898,
+     "dur": 9.229931972789114,
+     "silent": false
+    }
+   ],
+   "end": 38.355283446712015,
+   "dur": 37.805306122448975
+  },
+  {
+   "id": "title",
+   "type": "title_card",
+   "act": "TITLE",
+   "start": 38.355283446712015,
+   "lines": [
+    {
+     "i": 0,
+     "text": "",
+     "cue": "TITLE: THE CHOKEPOINT \u2014 hard cut, 1.8s hold",
+     "start": 38.355283446712015,
+     "end": 40.25528344671202,
+     "dur": 1.9000000000000057,
+     "silent": true
+    }
+   ],
+   "end": 40.55528344671202,
+   "dur": 2.200000000000003
+  },
+  {
+   "id": "chip_zoom",
+   "type": "chip_zoom",
+   "act": "ACT I",
+   "start": 40.55528344671202,
+   "lines": [
+    {
+     "i": 0,
+     "text": "To understand why that machine matters, you have to understand what a modern chip actually is.",
+     "cue": "phone outline centre",
+     "start": 40.55528344671202,
+     "end": 46.30222222222222,
+     "dur": 5.746938775510202,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "Inside the phone in your pocket is a piece of silicon about the size of a fingernail. Printed onto it are more than fifteen billion transistors.",
+     "cue": "zoom: phone -> die -> transistor grid, counter to 15,000,000,000",
+     "start": 46.48222222222222,
+     "end": 55.212925170068026,
+     "dur": 8.730702947845806,
+     "silent": false
+    }
+   ],
+   "end": 55.51292517006803,
+   "dur": 14.957641723356012
+  },
+  {
+   "id": "switch",
+   "type": "transistor_switch",
+   "act": "ACT I",
+   "start": 55.51292517006803,
+   "lines": [
+    {
+     "i": 0,
+     "text": "A transistor is just a switch. It lets current through, or it doesn't. That's the whole trick.",
+     "cue": "single switch toggles on/off",
+     "start": 55.51292517006803,
+     "end": 61.35274376417234,
+     "dur": 5.839818594104308,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "Wire enough of them together and you get arithmetic. Then logic. Then memory. Then everything.",
+     "cue": "switch -> gate -> adder -> abstract stack",
+     "start": 61.53274376417234,
+     "end": 67.36095238095238,
+     "dur": 5.828208616780046,
+     "silent": false
+    }
+   ],
+   "end": 67.66095238095238,
+   "dur": 12.14802721088435
+  },
+  {
+   "id": "nodes",
+   "type": "node_timeline",
+   "act": "ACT I",
+   "start": 67.66095238095238,
+   "lines": [
+    {
+     "i": 0,
+     "text": "And the entire history of computing is one move, repeated: make the switches smaller, so you can fit more of them in the same space.",
+     "cue": "log-scale line chart begins",
+     "start": 67.66095238095238,
+     "end": 76.24072562358276,
+     "dur": 8.579773242630381,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "In 1971, the features were ten thousand nanometers across. Today the leading edge is called three nanometer.",
+     "cue": "chart sweeps 1971 -> 2025, markers land",
+     "start": 76.42072562358277,
+     "end": 84.8263492063492,
+     "dur": 8.405623582766438,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "That name is now mostly marketing, but the real structures are only a few dozen atoms wide.",
+     "cue": "zoom to atom lattice, scale callout",
+     "start": 85.00634920634921,
+     "end": 90.161179138322,
+     "dur": 5.154829931972785,
+     "silent": false
+    }
+   ],
+   "end": 90.51115646258503,
+   "dur": 22.850204081632654
+  },
+  {
+   "id": "atoms",
+   "type": "atom_scale",
+   "act": "ACT I",
+   "start": 90.51115646258503,
+   "lines": [
+    {
+     "i": 0,
+     "text": "At that scale you are not really manufacturing any more. You are doing applied physics, trillions of times a month, with almost no mistakes allowed.",
+     "cue": "atom lattice with error tolerance band",
+     "start": 90.51115646258503,
+     "end": 99.79913832199547,
+     "dur": 9.287981859410436,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "And the way you do it is with light.",
+     "cue": "hard cut to white flash",
+     "start": 99.97913832199546,
+     "end": 101.48843537414966,
+     "dur": 1.5092970521541957,
+     "silent": false
+    }
+   ],
+   "end": 101.88843537414967,
+   "dur": 11.37727891156463
+  },
+  {
+   "id": "litho",
+   "type": "litho_process",
+   "act": "ACT II",
+   "start": 101.88843537414967,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Chips are printed, a little like photographs.",
+     "cue": "mask + light + wafer schematic",
+     "start": 101.88843537414967,
+     "end": 104.64,
+     "dur": 2.7515646258503352,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "You take a blueprint of the circuit, called a mask, shine light through it, and project the pattern onto silicon coated in light-sensitive chemicals.",
+     "cue": "light passes mask, pattern lands on wafer",
+     "start": 104.82,
+     "end": 114.24730158730159,
+     "dur": 9.4273015873016,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "Wash away what the light touched. Etch what's left. Then do it again. Eighty, a hundred times over, layer on layer.",
+     "cue": "layer stack builds up to 100",
+     "start": 114.42730158730159,
+     "end": 121.97378684807256,
+     "dur": 7.546485260770979,
+     "silent": false
+    }
+   ],
+   "end": 122.27378684807256,
+   "dur": 20.385351473922896
+  },
+  {
+   "id": "wavelength",
+   "type": "wavelength_bars",
+   "act": "ACT II",
+   "start": 122.27378684807256,
+   "lines": [
+    {
+     "i": 0,
+     "text": "The catch is that you cannot print a feature much smaller than the wavelength of the light you print with.",
+     "cue": "wave overlaid on feature, blur when too wide",
+     "start": 122.27378684807256,
+     "end": 127.13836734693878,
+     "dur": 4.864580498866218,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "For decades the industry used deep ultraviolet light, at a hundred and ninety-three nanometers.",
+     "cue": "193nm bar draws",
+     "start": 127.31836734693877,
+     "end": 133.5297052154195,
+     "dur": 6.21133786848074,
+     "silent": false
+    }
+   ],
+   "end": 133.8297052154195,
+   "dur": 11.555918367346933
+  },
+  {
+   "id": "tricks",
+   "type": "immersion_multipattern",
+   "act": "ACT II",
+   "start": 133.8297052154195,
+   "lines": [
+    {
+     "i": 0,
+     "text": "And for a long time, clever tricks kept that going. Shooting the light through water to bend it tighter.",
+     "cue": "water droplet lens, rays converge",
+     "start": 133.8297052154195,
+     "end": 139.87850340136055,
+     "dur": 6.0487981859410525,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "Exposing the same wafer two, three, four times with slightly offset masks, to draw lines finer than the light should allow.",
+     "cue": "offset exposures combine into fine lines",
+     "start": 140.05850340136055,
+     "end": 148.28997732426305,
+     "dur": 8.231473922902495,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "But every trick costs money, time, and yield. By the twenty-tens, the industry needed shorter light. Much shorter.",
+     "cue": "cost/time/yield meters climb red",
+     "start": 148.46997732426303,
+     "end": 156.24866213151927,
+     "dur": 7.778684807256241,
+     "silent": false
+    }
+   ],
+   "end": 156.54866213151928,
+   "dur": 22.718956916099785
+  },
+  {
+   "id": "euv_intro",
+   "type": "euv_reveal",
+   "act": "ACT II",
+   "start": 156.54866213151928,
+   "lines": [
+    {
+     "i": 0,
+     "text": "The answer was thirteen point five nanometers. Extreme ultraviolet.",
+     "cue": "193nm bar collapses to 13.5nm, dramatic",
+     "start": 156.54866213151928,
+     "end": 161.07655328798185,
+     "dur": 4.527891156462573,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "And here is the problem with extreme ultraviolet: almost nothing reflects it, and almost everything absorbs it.",
+     "cue": "beam hits materials, absorbed each time",
+     "start": 161.25655328798186,
+     "end": 168.30380952380952,
+     "dur": 7.0472562358276605,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "Glass absorbs it. Air absorbs it. You cannot use a lens. You cannot even use an ordinary mirror.",
+     "cue": "lens crossed out, mirror crossed out",
+     "start": 168.48380952380953,
+     "end": 174.78802721088437,
+     "dur": 6.304217687074839,
+     "silent": false
+    },
+    {
+     "i": 3,
+     "text": "So this is what had to be built instead.",
+     "cue": "cut to source chamber",
+     "start": 174.96802721088434,
+     "end": 177.53383219954648,
+     "dur": 2.565804988662137,
+     "silent": false
+    }
+   ],
+   "end": 177.8338321995465,
+   "dur": 21.285170068027213
+  },
+  {
+   "id": "source",
+   "type": "euv_source",
+   "act": "ACT II",
+   "start": 177.8338321995465,
+   "lines": [
+    {
+     "i": 0,
+     "text": "A stream of molten tin droplets falls through a vacuum chamber. About fifty thousand of them, every second.",
+     "cue": "droplet stream, rate counter 50,000/s",
+     "start": 177.8338321995465,
+     "end": 184.741768707483,
+     "dur": 6.907936507936512,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "Each droplet is hit by a high-power carbon dioxide laser. Twice.",
+     "cue": "laser pulses, two-stage",
+     "start": 184.92176870748298,
+     "end": 189.8560090702948,
+     "dur": 4.934240362811806,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "The first pulse flattens it into a pancake. The second vaporises it into a plasma hot enough to glow at thirteen point five nanometers.",
+     "cue": "pancake then plasma bloom, spectrum spike",
+     "start": 190.0360090702948,
+     "end": 198.8247619047619,
+     "dur": 8.788752834467118,
+     "silent": false
+    }
+   ],
+   "end": 199.1247619047619,
+   "dur": 21.290929705215405
+  },
+  {
+   "id": "mirrors",
+   "type": "mirror_stack",
+   "act": "ACT II",
+   "start": 199.1247619047619,
+   "lines": [
+    {
+     "i": 0,
+     "text": "That light is gathered not by lenses but by mirrors, and not ordinary mirrors either.",
+     "cue": "mirror array",
+     "start": 199.1247619047619,
+     "end": 204.1751020408163,
+     "dur": 5.050340136054416,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "They are built from dozens of alternating layers of molybdenum and silicon, each only a few atoms thick, tuned so the weak reflections add up instead of cancelling out.",
+     "cue": "bilayer stack cross-section, waves add constructively",
+     "start": 204.35510204081632,
+     "end": 215.64,
+     "dur": 11.284897959183667,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "Even so, each mirror returns only about seventy percent of the light that hits it. Put ten in a row and most of your beam is gone, so the source has to be brutally overpowered to compensate.",
+     "cue": "beam intensity decays across 10 mirrors",
+     "start": 215.82,
+     "end": 227.85954648526078,
+     "dur": 12.039546485260786,
+     "silent": false
+    }
+   ],
+   "end": 228.15954648526076,
+   "dur": 29.034784580498865
+  },
+  {
+   "id": "zeiss",
+   "type": "zeiss_germany",
+   "act": "ACT II",
+   "start": 228.15954648526076,
+   "lines": [
+    {
+     "i": 0,
+     "text": "The mirrors are ground in Germany to a precision that is genuinely hard to picture.",
+     "cue": "mirror blank, polishing",
+     "start": 228.15954648526076,
+     "end": 232.8267573696145,
+     "dur": 4.66721088435375,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "The manufacturer's own comparison: scale one of these mirrors up to the size of Germany, and the largest bump on its surface would be about a tenth of a millimetre tall.",
+     "cue": "mirror morphs into Germany outline, 0.1mm callout",
+     "start": 233.00675736961452,
+     "end": 243.00294784580498,
+     "dur": 9.996190476190463,
+     "silent": false
+    }
+   ],
+   "end": 243.35292517006803,
+   "dur": 15.193378684807271
+  },
+  {
+   "id": "specs",
+   "type": "machine_specs",
+   "act": "ACT II",
+   "start": 243.35292517006803,
+   "lines": [
+    {
+     "i": 0,
+     "text": "All of it sits in a vacuum, on a stage that moves the wafer at speed while holding position to a fraction of a nanometer.",
+     "cue": "stage oscillates, position readout",
+     "start": 243.35292517006803,
+     "end": 250.52789115646257,
+     "dur": 7.17496598639454,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "And it is expected to run, profitably, around the clock, for years.",
+     "cue": "uptime clock spins",
+     "start": 250.70789115646258,
+     "end": 255.6421315192744,
+     "dur": 4.934240362811806,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "The newest generation reportedly sells for over three hundred and fifty million euros. Fabs buy them anyway, because the alternative is not competing at all.",
+     "cue": "price card slams in",
+     "start": 255.82213151927436,
+     "end": 265.690612244898,
+     "dur": 9.868480725623613,
+     "silent": false
+    }
+   ],
+   "end": 265.99061224489793,
+   "dur": 22.6376870748299
+  },
+  {
+   "id": "web",
+   "type": "supply_web",
+   "act": "ACT II",
+   "start": 265.99061224489793,
+   "lines": [
+    {
+     "i": 0,
+     "text": "This is why there is only one supplier. It isn't a patent.",
+     "cue": "world map, supplier nodes light up",
+     "start": 265.99061224489793,
+     "end": 269.6825850340136,
+     "dur": 3.6919727891156526,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "It is thirty years of accumulated, mostly undocumented practical knowledge, spread across thousands of specialised firms, each of which is itself hard to replace.",
+     "cue": "nodes link into web converging on one point",
+     "start": 269.8625850340136,
+     "end": 280.8224036281179,
+     "dur": 10.95981859410432,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "You cannot buy that. You cannot really steal it. You have to grow it.",
+     "cue": "web pulses, single node highlighted",
+     "start": 281.0024036281179,
+     "end": 284.7408163265306,
+     "dur": 3.7384126984126738,
+     "silent": false
+    }
+   ],
+   "end": 285.1408163265306,
+   "dur": 19.150204081632694
+  },
+  {
+   "id": "foundry",
+   "type": "foundry_split",
+   "act": "ACT III",
+   "start": 285.1408163265306,
+   "lines": [
+    {
+     "i": 0,
+     "text": "But having the machine is not the same as being able to use it.",
+     "cue": "machine icon + question mark",
+     "start": 285.1408163265306,
+     "end": 288.2755102040816,
+     "dur": 3.134693877551001,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "Which brings us to the second chokepoint, and this one is on an island.",
+     "cue": "map push to Taiwan",
+     "start": 288.45551020408163,
+     "end": 292.3216326530612,
+     "dur": 3.8661224489795813,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "Until the nineteen-eighties, if you designed chips, you also built them. Designers and factories lived under one roof.",
+     "cue": "integrated company diagram",
+     "start": 292.5016326530612,
+     "end": 300.10616780045353,
+     "dur": 7.604535147392312,
+     "silent": false
+    },
+    {
+     "i": 3,
+     "text": "Then in nineteen eighty-seven, a Taiwanese company made a strange bet. It would build chips and only build chips, never designing anything that competed with its own customers.",
+     "cue": "split into foundry + fabless",
+     "start": 300.28616780045354,
+     "end": 312.44181405895694,
+     "dur": 12.155646258503396,
+     "silent": false
+    }
+   ],
+   "end": 312.7418140589569,
+   "dur": 27.600997732426265
+  },
+  {
+   "id": "share",
+   "type": "market_share",
+   "act": "ACT III",
+   "start": 312.7418140589569,
+   "lines": [
+    {
+     "i": 0,
+     "text": "That company was TSMC, and the bet reorganised the whole industry. Designers like Apple, Nvidia, Qualcomm and AMD could now exist without owning a single factory.",
+     "cue": "fabless logos spawn around foundry",
+     "start": 312.7418140589569,
+     "end": 324.50272108843535,
+     "dur": 11.76090702947846,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "The result: the hardest part of the supply chain collapsed into very few hands. By twenty twenty-five, TSMC held roughly seventy percent of the entire contract chipmaking market by revenue.",
+     "cue": "share bar grows to 70%",
+     "start": 324.68272108843536,
+     "end": 338.56825396825394,
+     "dur": 13.885532879818584,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "At the leading edge the concentration is sharper still. Samsung has fought with yields. Intel spent years behind. For the most advanced chips on Earth, there is effectively one real option.",
+     "cue": "leading-edge column isolates to one block",
+     "start": 338.74825396825395,
+     "end": 350.4511111111111,
+     "dur": 11.70285714285717,
+     "silent": false
+    }
+   ],
+   "end": 350.75111111111113,
+   "dur": 38.00929705215424
+  },
+  {
+   "id": "yield",
+   "type": "yield_wafer",
+   "act": "ACT III",
+   "start": 350.75111111111113,
+   "lines": [
+    {
+     "i": 0,
+     "text": "And the reason is boring, which is exactly what makes it so hard to beat. Yield.",
+     "cue": "wafer grid appears",
+     "start": 350.75111111111113,
+     "end": 355.1512925170068,
+     "dur": 4.400181405895694,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "Every fab loses some chips to defects. If your rival gets eighty good chips from a wafer and you get fifty, you lose. Same machines, same design, same everything.",
+     "cue": "two wafers side by side, defects marked, 80 vs 50",
+     "start": 355.33129251700683,
+     "end": 367.12702947845804,
+     "dur": 11.795736961451212,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "Yield comes from running millions of wafers and fixing thousands of tiny problems you only find by running millions of wafers. It is a flywheel: volume buys learning, learning buys volume.",
+     "cue": "flywheel diagram accelerates",
+     "start": 367.30702947845805,
+     "end": 379.68326530612245,
+     "dur": 12.376235827664402,
+     "silent": false
+    },
+    {
+     "i": 3,
+     "text": "TSMC has been spinning that flywheel for nearly forty years, mostly within a few dozen miles of Taiwan's west coast.",
+     "cue": "Taiwan map, fab cluster pins drop",
+     "start": 379.86326530612246,
+     "end": 388.0599092970522,
+     "dur": 8.196643990929715,
+     "silent": false
+    }
+   ],
+   "end": 388.3599092970521,
+   "dur": 37.608798185941
+  },
+  {
+   "id": "shortage",
+   "type": "auto_shortage",
+   "act": "ACT IV",
+   "start": 388.3599092970521,
+   "lines": [
+    {
+     "i": 0,
+     "text": "In twenty twenty, the world ran a small, accidental experiment in what happens when this system hiccups.",
+     "cue": "2020 timeline marker",
+     "start": 388.3599092970521,
+     "end": 395.8831746031746,
+     "dur": 7.523265306122482,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "When the pandemic hit, carmakers cancelled their chip orders. Consumer electronics demand exploded and took the freed-up capacity. When the carmakers came back, the queue had closed behind them.",
+     "cue": "order queue animation, slots refill with electronics",
+     "start": 396.0631746031746,
+     "end": 408.1375510204082,
+     "dur": 12.074376417233566,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "These were not advanced chips. Many were cheap, old, unglamorous parts. It made no difference.",
+     "cue": "humble chip icon, price tag",
+     "start": 408.3175510204082,
+     "end": 414.5869387755102,
+     "dur": 6.269387755102002,
+     "silent": false
+    },
+    {
+     "i": 3,
+     "text": "By the end of twenty twenty-one, the consultancy AlixPartners estimated the shortage would cost the car industry two hundred and ten billion dollars in lost revenue, and about seven point seven million vehicles that were simply never built.",
+     "cue": "counter to $210B, car grid empties 7.7M",
+     "start": 414.7669387755102,
+     "end": 429.7786394557823,
+     "dur": 15.0117006802721,
+     "silent": false
+    },
+    {
+     "i": 4,
+     "text": "Lead times stretched past twenty weeks. Assembly lines sat idle, waiting on components worth less than a cup of coffee.",
+     "cue": "21-week bar, idle factory",
+     "start": 429.9586394557823,
+     "end": 438.10884353741494,
+     "dur": 8.150204081632637,
+     "silent": false
+    },
+    {
+     "i": 5,
+     "text": "That was the system working, more or less. Just with the timing slightly off.",
+     "cue": "gears, one tooth out of phase",
+     "start": 438.28884353741495,
+     "end": 443.5249433106576,
+     "dur": 5.236099773242643,
+     "silent": false
+    }
+   ],
+   "end": 443.8249433106576,
+   "dur": 55.465034013605475
+  },
+  {
+   "id": "blockade",
+   "type": "blockade_scenarios",
+   "act": "ACT IV",
+   "start": 443.8249433106576,
+   "lines": [
+    {
+     "i": 0,
+     "text": "So: what if the island stopped?",
+     "cue": "Taiwan map, hard red treatment",
+     "start": 443.8249433106576,
+     "end": 446.0424489795918,
+     "dur": 2.2175056689342227,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "The estimates here carry enormous uncertainty, and anyone who tells you otherwise is selling something. But they are not small.",
+     "cue": "uncertainty band on estimate",
+     "start": 446.22244897959183,
+     "end": 453.68766439909297,
+     "dur": 7.465215419501135,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "Rhodium Group put over two trillion dollars of annual economic activity at risk in a blockade scenario, before counting sanctions, escalation, or knock-on effects.",
+     "cue": "$2T bar + caveat label",
+     "start": 453.867664399093,
+     "end": 465.39637188208616,
+     "dur": 11.528707482993184,
+     "silent": false
+    },
+    {
+     "i": 3,
+     "text": "Bloomberg Economics modelled a year-long blockade and got roughly five percent off global output, around five trillion dollars, with Taiwan down twelve percent, China down nearly nine, the United States down three.",
+     "cue": "country bars drop",
+     "start": 465.57637188208616,
+     "end": 480.54163265306124,
+     "dur": 14.965260770975078,
+     "silent": false
+    },
+    {
+     "i": 4,
+     "text": "For a full war, their figure was closer to ten trillion.",
+     "cue": "$10T bar extends off-frame",
+     "start": 480.72163265306125,
+     "end": 484.4600453514739,
+     "dur": 3.7384126984126738,
+     "silent": false
+    },
+    {
+     "i": 5,
+     "text": "For scale: the two thousand eight financial crisis took a little over three percent off global output.",
+     "cue": "2008 reference line drawn under 5%",
+     "start": 484.64004535147393,
+     "end": 491.2345124716553,
+     "dur": 6.594467120181378,
+     "silent": false
+    }
+   ],
+   "end": 491.5844897959184,
+   "dur": 47.759546485260785
+  },
+  {
+   "id": "nostock",
+   "type": "no_stockpile",
+   "act": "ACT IV",
+   "start": 491.5844897959184,
+   "lines": [
+    {
+     "i": 0,
+     "text": "And unlike oil, you cannot stockpile your way out of this.",
+     "cue": "oil barrel vs chip, barrel fills, chip can't",
+     "start": 491.5844897959184,
+     "end": 495.13714285714286,
+     "dur": 3.5526530612244756,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "A chip design is tied to one factory's specific process. You cannot take the blueprint somewhere else and press print.",
+     "cue": "design locked to fab, key doesn't fit second fab",
+     "start": 495.31714285714287,
+     "end": 502.49210884353744,
+     "dur": 7.174965986394568,
+     "silent": false
+    }
+   ],
+   "end": 502.8921088435374,
+   "dur": 11.307619047619028
+  },
+  {
+   "id": "chipsact",
+   "type": "chips_act",
+   "act": "ACT V",
+   "start": 502.8921088435374,
+   "lines": [
+    {
+     "i": 0,
+     "text": "So for the past few years, governments have been trying to fix this. Two strategies, running at the same time.",
+     "cue": "split screen: BUILD / BLOCK",
+     "start": 502.8921088435374,
+     "end": 509.91614512471654,
+     "dur": 7.0240362811791215,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "Strategy one: build it somewhere else.",
+     "cue": "BUILD highlighted",
+     "start": 510.09614512471654,
+     "end": 513.0915192743764,
+     "dur": 2.995374149659881,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "In twenty twenty-two the United States passed the CHIPS and Science Act. Around fifty-three billion dollars, of which roughly thirty-nine billion was direct manufacturing incentives, plus tens of billions in lending authority.",
+     "cue": "$52.7B breaks into $39B + $11B + loans",
+     "start": 513.2715192743764,
+     "end": 527.0641723356009,
+     "dur": 13.792653061224541,
+     "silent": false
+    },
+    {
+     "i": 3,
+     "text": "Europe, Japan, South Korea, India and China have all announced versions of the same idea. TSMC is building in Arizona and Japan. Intel and Samsung are expanding in the United States.",
+     "cue": "world map, subsidy programmes light up",
+     "start": 527.2441723356009,
+     "end": 540.3053968253968,
+     "dur": 13.061224489795904,
+     "silent": false
+    }
+   ],
+   "end": 540.6053968253968,
+   "dur": 37.71328798185942
+  },
+  {
+   "id": "controls",
+   "type": "export_controls",
+   "act": "ACT V",
+   "start": 540.6053968253968,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Strategy two: stop the competition.",
+     "cue": "BLOCK highlighted",
+     "start": 540.6053968253968,
+     "end": 543.3917913832199,
+     "dur": 2.786394557823087,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "In October twenty twenty-two, the United States introduced sweeping export controls designed to cut China off from advanced chips and the tools that make them. A year later the rules were tightened and widened.",
+     "cue": "timeline Oct 2022 -> Oct 2023, scope expands",
+     "start": 543.57179138322,
+     "end": 556.5285260770975,
+     "dur": 12.956734693877479,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "An EUV machine has never been allowed to be sold to China. Not one.",
+     "cue": "shipping route to China blocked, counter 0",
+     "start": 556.7085260770975,
+     "end": 561.1203174603174,
+     "dur": 4.4117913832199065,
+     "silent": false
+    }
+   ],
+   "end": 561.4203174603175,
+   "dur": 20.814920634920668
+  },
+  {
+   "id": "reshore",
+   "type": "reshoring_reality",
+   "act": "ACT V",
+   "start": 561.4203174603175,
+   "lines": [
+    {
+     "i": 0,
+     "text": "So how is it going?",
+     "cue": "question beat",
+     "start": 561.4203174603175,
+     "end": 562.7554648526077,
+     "dur": 1.335147392290196,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "Partly. Fabs genuinely are being built, and some are producing. But the fab is the easy part.",
+     "cue": "fab building rises",
+     "start": 562.9354648526078,
+     "end": 568.8449433106576,
+     "dur": 5.909478458049875,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "What's hard to move is everything around it. The specialty chemical suppliers. The equipment service engineers. The packaging and testing plants.",
+     "cue": "ecosystem layers stack around fab",
+     "start": 569.0249433106576,
+     "end": 578.1503854875283,
+     "dur": 9.125442176870706,
+     "silent": false
+    },
+    {
+     "i": 3,
+     "text": "And the particular culture of a workforce that will shut down and restart a two-billion-dollar line at three in the morning because one sensor drifted.",
+     "cue": "3AM clock, line restarts",
+     "start": 578.3303854875284,
+     "end": 587.1191383219955,
+     "dur": 8.788752834467118,
+     "silent": false
+    },
+    {
+     "i": 4,
+     "text": "And underneath every one of these plans, in Arizona and Dresden and Kumamoto alike, sits the same machine, from the same company, in the same Dutch town.",
+     "cue": "three fabs all arrow to Veldhoven",
+     "start": 587.2991383219954,
+     "end": 597.5739682539682,
+     "dur": 10.274829931972818,
+     "silent": false
+    },
+    {
+     "i": 5,
+     "text": "Diversifying the factories does not diversify the chokepoint. It just gives it more customers.",
+     "cue": "many fabs -> one narrow neck",
+     "start": 597.7539682539683,
+     "end": 603.6286167800454,
+     "dur": 5.874648526077067,
+     "silent": false
+    }
+   ],
+   "end": 603.9286167800453,
+   "dur": 42.508299319727826
+  },
+  {
+   "id": "smic",
+   "type": "smic_workaround",
+   "act": "ACT V",
+   "start": 603.9286167800453,
+   "lines": [
+    {
+     "i": 0,
+     "text": "Meanwhile the controls have had an effect, but not a clean one.",
+     "cue": "control line with leak",
+     "start": 603.9286167800453,
+     "end": 608.0269387755102,
+     "dur": 4.0983219954648575,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "In twenty twenty-three, Huawei shipped a phone with a seven-nanometer-class chip built by China's SMIC, without EUV, using older machines and many more exposure passes.",
+     "cue": "DUV multi-pass count climbs",
+     "start": 608.2069387755103,
+     "end": 620.6528344671202,
+     "dur": 12.445895691609962,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "Analysts believe the yields are poor and the costs high. But it exists. Impossible turned out to mean expensive.",
+     "cue": "yield comparison, cost premium",
+     "start": 620.8328344671202,
+     "end": 627.7872108843537,
+     "dur": 6.954376417233561,
+     "silent": false
+    },
+    {
+     "i": 3,
+     "text": "Which is the uncomfortable thing about chokepoints. Squeezing one does not only stop your rival. It tells them exactly where to dig.",
+     "cue": "pressure on pipe, new branch forms",
+     "start": 627.9672108843538,
+     "end": 635.6414058956916,
+     "dur": 7.674195011337815,
+     "silent": false
+    }
+   ],
+   "end": 636.0414058956916,
+   "dur": 32.11278911564625
+  },
+  {
+   "id": "outro",
+   "type": "outro_specialization",
+   "act": "OUTRO",
+   "start": 636.0414058956916,
+   "lines": [
+    {
+     "i": 0,
+     "text": "None of this happened because of a conspiracy, or a failure. It happened because of specialisation.",
+     "cue": "clean type on cream",
+     "start": 636.0414058956916,
+     "end": 642.0669841269842,
+     "dur": 6.02557823129257,
+     "silent": false
+    },
+    {
+     "i": 1,
+     "text": "Every step \u2014 splitting design from manufacturing, buying the one best machine, clustering the factories where the expertise already was \u2014 made chips cheaper and better, faster than almost anything humans have ever built.",
+     "cue": "efficiency curve climbs",
+     "start": 642.2469841269841,
+     "end": 657.0032653061224,
+     "dur": 14.756281179138341,
+     "silent": false
+    },
+    {
+     "i": 2,
+     "text": "The fragility was not the price of getting it wrong. It was the price of getting it relentlessly right.",
+     "cue": "same curve, slack shading disappears",
+     "start": 657.1832653061224,
+     "end": 662.6980045351474,
+     "dur": 5.514739229025054,
+     "silent": false
+    },
+    {
+     "i": 3,
+     "text": "We built the most sophisticated supply chain in history, and we optimised it until there was almost no slack left anywhere in it.",
+     "cue": "chain tightens to a line",
+     "start": 662.8780045351474,
+     "end": 671.6203174603174,
+     "dur": 8.74231292517004,
+     "silent": false
+    },
+    {
+     "i": 4,
+     "text": "And now the whole digital world balances on a few thousand people in Taiwan, a few hundred in a Dutch town, and a stream of tin droplets falling through a vacuum, fifty thousand times a second.",
+     "cue": "pull back to droplet stream, slow fade",
+     "start": 671.8003174603175,
+     "end": 684.490022675737,
+     "dur": 12.689705215419508,
+     "silent": false
+    }
+   ],
+   "end": 684.990022675737,
+   "dur": 48.94861678004543
+  },
+  {
+   "id": "endcard",
+   "type": "end_card",
+   "act": "END",
+   "start": 684.990022675737,
+   "lines": [
+    {
+     "i": 0,
+     "text": "",
+     "cue": "END CARD: sources + subscribe, 3.2s hold",
+     "start": 684.990022675737,
+     "end": 688.1900226757369,
+     "dur": 3.199999999999932,
+     "silent": true
+    }
+   ],
+   "end": 688.1900226757369,
+   "dur": 3.199999999999932
+  }
+ ],
+ "duration": 688.1900226757369,
+ "frames": 20646
+}

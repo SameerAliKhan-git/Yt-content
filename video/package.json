@@ -1,0 +1,11 @@
+{
+  "name": "chokepoint-video",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic canvas renderer for the Vox-style explainer.",
+  "scripts": {
+    "serve": "node serve.js 8099",
+    "probe": "node render.js --probe",
+    "render": "bash build.sh"
+  }
+}

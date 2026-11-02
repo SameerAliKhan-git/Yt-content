@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Chokepoint Renderer</title>
+<style>
+  @font-face { font-family:"Anton";           src:url("../fonts/anton.woff2") format("woff2");           font-weight:400; font-display:block; }
+  @font-face { font-family:"ArchivoBlack";    src:url("../fonts/archivo-black.woff2") format("woff2");    font-weight:400; font-display:block; }
+  @font-face { font-family:"BarlowCondensed"; src:url("../fonts/barlow-cond-500.woff2") format("woff2");  font-weight:500; font-display:block; }
+  @font-face { font-family:"BarlowCondensed"; src:url("../fonts/barlow-cond-600.woff2") format("woff2");  font-weight:600; font-display:block; }
+  @font-face { font-family:"BarlowCondensed"; src:url("../fonts/barlow-cond-700.woff2") format("woff2");  font-weight:700; font-display:block; }
+  @font-face { font-family:"Inter";           src:url("../fonts/inter-400.woff2") format("woff2");        font-weight:400; font-display:block; }
+  @font-face { font-family:"Inter";           src:url("../fonts/inter-600.woff2") format("woff2");        font-weight:600; font-display:block; }
+  @font-face { font-family:"Inter";           src:url("../fonts/inter-700.woff2") format("woff2");        font-weight:700; font-display:block; }
+  @font-face { font-family:"RobotoMono";      src:url("../fonts/roboto-mono-500.woff2") format("woff2");  font-weight:500; font-display:block; }
+  html,body { margin:0; padding:0; background:#F7F3EC; overflow:hidden; }
+  #stage { display:block; width:1920px; height:1080px; }
+</style>
+<script src="./vendor/topojson-client.min.js"></script>
+</head>
+<body>
+<canvas id="stage" width="1920" height="1080"></canvas>
+<script type="module">
+import { makeTimeline } from './timeline.js';
+import { W, H } from './lib/theme.js';
+
+const cv = document.getElementById('stage');
+const g  = cv.getContext('2d', { alpha: false });
+
+async function boot() {
+  // fonts must be fully loaded before any frame is measured or drawn
+  const families = [
+    '400 100px Anton', '400 100px ArchivoBlack',
+    '500 100px BarlowCondensed', '600 100px BarlowCondensed', '700 100px BarlowCondensed',
+    '400 100px Inter', '600 100px Inter', '700 100px Inter',
+    '500 100px RobotoMono',
+  ];
+  await Promise.all(families.map(f => document.fonts.load(f, 'ABCDEFGhijk0123456789%$€')));
+  await document.fonts.ready;
+
+  const [timing, topo] = await Promise.all([
+    fetch('../../build/timing.json').then(r => r.json()),
+    fetch('./data/countries-50m.json').then(r => r.json()),
+  ]);
+
+  // geo assets
+  const countries = topojson.feature(topo, topo.objects.countries);
+  const land = topojson.feature(topo, topo.objects.land);
+  const byName = {};
+  for (const f of countries.features) {
+    const n = f.properties && f.properties.name;
+    if (n) byName[n] = f;
+  }
+  const assets = { geo: { countries, land, byName } };
+
+  const tl = makeTimeline(timing, assets);
+
+  window.VOX = {
+    fps: tl.fps,
+    frames: tl.frames,
+    duration: tl.duration,
+    shots: tl.shots.map(s => ({ id: s.id, type: s.type, start: s.start, end: s.end })),
+    seek(frame) {
+      const t = frame / tl.fps;
+      g.setTransform(1, 0, 0, 1, 0, 0);
+      g.globalAlpha = 1;
+      tl.draw(g, t, frame);
+      return true;
+    },
+    jpeg(q = 0.92) { return cv.toDataURL('image/jpeg', q); },
+  };
+  window.VOX_READY = true;
+}
+
+boot().catch(e => {
+  window.VOX_ERROR = String(e && e.stack || e);
+  document.title = 'BOOT ERROR';
+});
+</script>
+</body>
+</html>

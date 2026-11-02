@@ -1,0 +1,6 @@
+# Render intermediates — regenerate with video/build.sh
+build/chunks/
+build/probe*/
+build/*.png
+build/smoke.mp4
+node_modules/
