@@ -7,3 +7,7 @@ node_modules/
 out/
 build/narration.wav
 build/seg_*/
+remotion/node_modules/
+remotion/public/data/narration.wav
+remotion/public/data/countries-50m.json
+remotion/.remotion/
