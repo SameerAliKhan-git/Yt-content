@@ -89,7 +89,7 @@ SoC annotations), and cite it in the on-screen source line.
 | Thing | Status |
 |---|---|
 | Watching video / YouTube transcripts | **Impossible** — no video capability; YouTube blocks this datacenter IP. Ask for written notes, not links. |
-| Image/video generation | Not available in this container. |
+| Image/video/audio/3D generation | **Higgsfield MCP is connected** (`mcp__Higgsfield__*`) — but the account is on the **free plan with 0 credits**, so no generation will run until it is topped up. Check with `balance` before planning any generated asset, and never spend credits without explicit approval. |
 | Wikimedia Commons | **429 rate-limited** on this shared IP. API worked briefly then throttled. `video/fetch_assets.py` retries with backoff and skips rather than substituting anything unlicensed. |
 | Openverse search | Times out through the proxy. |
 | npm, jsDelivr, Natural Earth, OSM tiles, NASA | ✅ all reachable |
@@ -107,7 +107,18 @@ attribution, so credits generate themselves.
 - **NASA** imagery — public domain
 - **OpenStreetMap** tiles — ODbL, needs attribution
 
-Real **photography** is the current gap (blocked on Wikimedia).
+Real **photography** is the current gap (blocked on Wikimedia, and Higgsfield
+generation needs credits).
+
+### Higgsfield explainer presets
+
+`get_explainer_presets` returns 22 styles. Closest to this channel's target:
+**Editorial Motion Graphics**, **Paper collage**, **Poster Vector**,
+**Isometric Flat Vector**, **Mixed Media**.
+
+⚠️ **Every preset is 9:16.** They are built for Shorts/Reels, not 16:9
+long-form. Do not assume a preset will serve a landscape explainer — use them
+for Shorts repurposing, and keep the code pipeline for 16:9.
 
 ---
 
