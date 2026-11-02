@@ -60,10 +60,34 @@ the difference decides whether a monetised video is legal:
 | XTTS-v2 | MPL-2.0 | CPML | ❌ (and Coqui is defunct — no licence to buy) |
 | Piper *(in use)* | GPL-3.0 | MIT | ✅ GPL covers the software, **not its output** |
 
-### Narration: a human-sounding voice, never a robotic one
+### Narration: the owner's OWN cloned voice — decided
 
-**Default: Kokoro** (`--engine kokoro`), Apache-2.0, 54 voices, runs on CPU
-faster than realtime. This is the channel voice unless told otherwise.
+The owner wants **their own voice**, not a stock AI voice. This is settled; do
+not substitute a synthetic voice except as a temporary scratch track.
+
+```bash
+/tmp/cbenv/bin/python video/clone_voice.py --script script/<name>.json \
+  --reference assets/voice/reference.wav \
+  --out-wav build/narration.wav --out-timing build/timing.json
+```
+
+- **Chatterbox** — MIT code *and* MIT weights, so monetisation is clean.
+- Needs `assets/voice/reference.wav`: 3–5 min, documentary delivery, WAV/FLAC,
+  mono, ≥24 kHz, **no noise reduction applied**. Full brief and a read-aloud
+  script tuned to this niche are in `assets/voice/README.md`.
+- Voice samples are **gitignored** — they are the owner's biometric voice data.
+  Never commit them, never send them anywhere.
+- CPU-only install: `pip install --index-url https://download.pytorch.org/whl/cpu
+  torch torchaudio` **first**, then `pip install chatterbox-tts`. Installing
+  chatterbox directly pulls a ~2.5 GB CUDA torch tree and stalls.
+- `clone_voice.py` writes the same narration.wav + timing.json contract as
+  `tts.py`, so the animation timeline, captions and chapters re-derive unchanged.
+
+### Fallback only: synthetic voices
+
+**Kokoro** (`--engine kokoro`), Apache-2.0, 54 voices, CPU faster than realtime.
+Use **only** as a scratch track while waiting on the owner's recording, or to
+time a draft. It is not the channel voice.
 
 ```bash
 /tmp/ttsenv/bin/python video/tts.py --script script/<name>.json \

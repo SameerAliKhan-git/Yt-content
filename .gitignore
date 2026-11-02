@@ -11,3 +11,6 @@ remotion/node_modules/
 remotion/public/data/narration.wav
 remotion/public/data/countries-50m.json
 remotion/.remotion/
+assets/voice/*.wav
+assets/voice/*.flac
+assets/voice/*.m4a
