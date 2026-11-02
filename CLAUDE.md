@@ -83,6 +83,18 @@ not substitute a synthetic voice except as a temporary scratch track.
 - `clone_voice.py` writes the same narration.wav + timing.json contract as
   `tts.py`, so the animation timeline, captions and chapters re-derive unchanged.
 
+**Measured CPU speed (4 cores, no GPU): ~7.6x slower than realtime.**
+
+| narration | compute |
+|---|---|
+| 1 min | ~8 min |
+| 11.5 min | **~88 min** |
+
+Workable, because narration is generated **once per script** — start it in the
+background and build scenes while it runs. Model load adds ~40s. Chatterbox
+pulls a CUDA torch build regardless of the CPU index (venv ~6.2 GB); it still
+runs on CPU.
+
 ### Fallback only: synthetic voices
 
 **Kokoro** (`--engine kokoro`), Apache-2.0, 54 voices, CPU faster than realtime.
