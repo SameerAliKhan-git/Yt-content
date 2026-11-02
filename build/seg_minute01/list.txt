@@ -1,0 +1,4 @@
+file '/home/user/Yt-content/build/seg_minute01/c00.mp4'
+file '/home/user/Yt-content/build/seg_minute01/c01.mp4'
+file '/home/user/Yt-content/build/seg_minute01/c02.mp4'
+file '/home/user/Yt-content/build/seg_minute01/c03.mp4'

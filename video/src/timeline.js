@@ -4,6 +4,7 @@ import { clamp, tw, E, hexA } from './lib/anim.js';
 import { grain, vignette, text } from './lib/draw.js';
 import { F } from './lib/theme.js';
 import SCENES from './scenes/index.js';
+import { cameraFor, applyCam, SHOT_CAMERA, IDENT } from './lib/camera.js';
 
 const XF = 0.42;   // cross-fade / push duration between shots, seconds
 
@@ -76,9 +77,14 @@ export function makeTimeline(timing, assets) {
   function renderShot(g, shot, tAbs, ctx) {
     const fn = SCENES[shot.type];
     const s = shotState(shot, tAbs);
+    const spec = SHOT_CAMERA[shot.id];
+    const cam = spec && spec.kind === 'hold'
+      ? IDENT
+      : cameraFor(shot.id, (tAbs - shot.start) / Math.max(0.001, shot.dur), spec);
     g.save();
+    applyCam(g, cam);
     try {
-      if (fn) fn(g, s, ctx);
+      if (fn) fn(g, s, { ...ctx, cam });
       else placeholder(g, s);
     } catch (err) {
       g.restore(); g.save();

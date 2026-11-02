@@ -2,71 +2,76 @@ import { C, F, W, H, SAFE } from '../lib/theme.js';
 import { clamp, lerp, inv, tw, E, hexA, hash01, count, commas } from '../lib/anim.js';
 import { text, headline, roundRect, panel, arrow, lineChart, axes, source, measure, circleHL, underline } from '../lib/draw.js';
 import { segA, segP, slate, cards, readout } from './_util.js';
+import { dieFloorplan, finfetRow } from '../assets/registry.js';
 
 // ------------------------------------------------- PHONE -> TRANSISTOR ----
 export function chip_zoom(g, s, ctx) {
   slate(g, s, 'ACT I — WHAT A CHIP IS');
-  // one continuous zoom across the whole shot
-  const z = E.inOutCubic(clamp((s.t - s.ls(0) - 0.4) / Math.max(0.1, s.le(1) - s.ls(0) - 1.2)));
-  const cx = W / 2, cy = H / 2 + 20;
-  const scale = Math.pow(26, z);           // phone -> die -> transistors
+  const cx = W / 2, cy = H / 2 + 52;
 
-  // phone body
-  const aPhone = clamp(1 - z * 2.2);
+  // stage 1: the phone, with the die sitting inside it
+  const pIn = s.tw(0, 0.2, 1.1, E.outCubic);
+  const zoom = s.tw(1, 0.1, 2.4, E.inOutCubic);      // phone -> die
+  const deep = s.tw(1, 6.0, 2.4, E.inOutCubic);      // die -> transistors (after a hold)
+
+  // phone body recedes as we push into the die
+  const aPhone = clamp(1 - zoom * 1.25);
   if (aPhone > 0) {
     g.save(); g.globalAlpha = aPhone;
-    const pw = 330 * scale, ph = 660 * scale;
-    g.strokeStyle = C.ink; g.lineWidth = 7 * Math.min(1, scale);
-    roundRect(g, cx - pw / 2, cy - ph / 2, pw, ph, 44 * scale); g.stroke();
+    const sc = lerp(1, 3.4, zoom);
+    const pw = 300 * sc, ph = 614 * sc;
+    g.strokeStyle = C.ink; g.lineWidth = 7;
+    roundRect(g, cx - pw / 2, cy - ph / 2, pw, ph, 42 * sc); g.stroke();
+    g.strokeStyle = hexA(C.ink, 0.25); g.lineWidth = 3;
+    roundRect(g, cx - pw / 2 + 11 * sc, cy - ph / 2 + 13 * sc, pw - 22 * sc, ph - 26 * sc, 34 * sc); g.stroke();
     g.restore();
   }
 
-  // the die
-  const dieW = 86 * scale, dieH = 86 * scale;
-  const aDie = clamp(Math.min(z * 4, 1)) * clamp(1 - (z - 0.55) * 3.2);
+  // the die: a real SoC floorplan, not a blank square
+  const dieSc = lerp(0.12, 1.0, zoom);
+  const dw = 700 * dieSc, dh = 516 * dieSc;
+  const aDie = clamp(zoom * 3) * clamp(1 - deep * 1.3);
   if (aDie > 0) {
-    g.save(); g.globalAlpha = aDie;
-    g.fillStyle = hexA(C.teal, 0.16); g.strokeStyle = C.teal; g.lineWidth = 4;
-    roundRect(g, cx - dieW / 2, cy - dieH / 2, dieW, dieH, 6 * Math.min(2, scale)); g.fill(); g.stroke();
-    g.restore();
+    dieFloorplan(g, cx - dw / 2, cy - dh / 2, dw, dh, {
+      prog: clamp(zoom * 1.6), labels: clamp(zoom * 2 - 0.8), alpha: aDie, t: s.t,
+    });
+    if (zoom > 0.75) {
+      g.save(); g.globalAlpha = aDie * clamp((zoom - 0.75) * 4);
+      text(g, 'ONE SoC DIE  ·  ABOUT A FINGERNAIL ACROSS', cx, cy + dh / 2 + 54, {
+        size: 25, fam: F.label, weight: 700, fill: C.inkSoft, align: 'center', caps: true, track: 2.4,
+      });
+      g.restore();
+    }
   }
 
-  // transistor lattice, revealed as we arrive
-  const aGrid = clamp((z - 0.42) * 3);
-  if (aGrid > 0) {
-    g.save(); g.globalAlpha = aGrid;
-    const step = 46, n = Math.ceil(W / step) + 2, m = Math.ceil(H / step) + 2;
-    const ph = (z - 0.42) * 240;
-    g.strokeStyle = hexA(C.teal, 0.5); g.lineWidth = 2;
-    for (let i = 0; i < n; i++) for (let j = 0; j < m; j++) {
-      const x = (i * step - ph % step) - step, y = j * step - step;
-      const on = hash01(i * 97 + j, 3) > 0.42;
-      g.globalAlpha = aGrid * (on ? 0.9 : 0.28);
-      g.strokeRect(x + 8, y + 8, step - 16, step - 16);
-      if (on) {
-        g.fillStyle = hexA(C.teal, 0.22); g.fillRect(x + 8, y + 8, step - 16, step - 16);
-        g.beginPath();
-        g.moveTo(x + 8, y + step / 2); g.lineTo(x + step - 8, y + step / 2);
-        g.strokeStyle = hexA(C.ink, 0.5); g.stroke();
-        g.strokeStyle = hexA(C.teal, 0.5);
-      }
+  // and under it: the actual switches
+  if (deep > 0) {
+    const a = clamp(deep * 2);
+    g.save(); g.globalAlpha = a;
+    const rows = 4, rh = 150;
+    for (let r = 0; r < rows; r++) {
+      finfetRow(g, 180, cy - (rows * rh) / 2 + r * rh, W - 360, rh - 26, {
+        prog: clamp(deep * 1.5 - r * 0.12), alpha: 1, n: 9,
+      });
     }
     g.restore();
   }
 
-  // headline + counter
-  const a1 = s.tw(1, 0.1, 0.7);
+  // the count
+  const a1 = s.tw(1, 1.0, 0.8);
   if (a1 > 0) {
+    const v = count(s.t, s.ls(1) + 1.0, 2.8, 15e9);
+    const px = W - SAFE.x - 820, py = 142;
     g.save();
-    panel(g, SAFE.x - 30, H - 300, 940, 170, { fill: hexA(C.bg, 0.93), r: 8, shadow: 0.08, alpha: a1 });
-    const v = count(s.t, s.ls(1) + 0.9, 2.6, 15e9);
-    text(g, commas(v), SAFE.x, H - 190, { size: 96, fam: F.stat, fill: C.ink, alpha: a1 });
-    text(g, 'TRANSISTORS ON A PIECE OF SILICON THE SIZE OF A FINGERNAIL', SAFE.x, H - 155, {
-      size: 25, fam: F.label, weight: 600, fill: C.inkSoft, caps: true, track: 2.2, alpha: a1,
+    panel(g, px, py, 820, 142, { fill: hexA(C.bg, 0.95), r: 8, shadow: 0.1, alpha: a1 });
+    g.fillStyle = C.red; roundRect(g, px, py, 820, 8, 3); g.fill();
+    text(g, commas(v), px + 30, py + 92, { size: 80, fam: F.stat, fill: C.ink, alpha: a1 });
+    text(g, 'TRANSISTORS ON ONE PIECE OF SILICON', px + 30, py + 124, {
+      size: 23, fam: F.label, weight: 600, fill: C.inkSoft, caps: true, track: 2.2, alpha: a1,
     });
     g.restore();
   }
-  source(g, 'Apple A-series / Qualcomm die disclosures', { alpha: a1 * 0.8 });
+  source(g, 'block layout after published SoC die annotations', { alpha: a1 * 0.8 });
 }
 
 // ------------------------------------------------------- THE SWITCH ----

@@ -2,6 +2,7 @@ import { C, F, W, H, SAFE } from '../lib/theme.js';
 import { clamp, lerp, tw, E, hexA, hash01, count, commas } from '../lib/anim.js';
 import { text, headline, roundRect, panel, arrow, drawFeature, makeProj, source, measure } from '../lib/draw.js';
 import { segA, segP, machine, scaleBar, readout, darkStage, cards } from './_util.js';
+import { euvScanner, callout } from '../assets/registry.js';
 
 // ---------------------------------------------------------- COLD OPEN ----
 export function coldopen_machine(g, s, ctx) {
@@ -11,13 +12,18 @@ export function coldopen_machine(g, s, ctx) {
   // --- L0: the machine + scale -------------------------------------------
   const aM = segA(s, 0, 2, 0.5);
   if (aM > 0) {
-    const drift = lerp(0, -70, segP(s, 0, 2));
-    machine(g, W / 2 + drift * 0.3, H / 2 - 30, 0.92, {
-      prog: s.tw(0, 0.15, 2.2, E.outCubic), alpha: aM,
-      glow: s.tw(1, 0.4, 1.4), detail: 1,
+    // the real machine: LPP source -> illuminator -> reticle -> 6-mirror
+    // projection optics -> wafer stage, assembling as the line is spoken
+    euvScanner(g, W / 2, H / 2 + 70, 0.90, {
+      build: s.tw(0, 0.2, 3.2, E.outCubic),
+      beam: s.tw(1, 0.3, 1.4),
+      labels: s.tw(0, 1.6, 1.2),
+      dark: true, t: s.t,
     });
-    scaleBar(g, W / 2 - 350, H / 2 + 210, 700, 'ABOUT THE LENGTH OF A BUS',
-      { prog: s.tw(0, 1.5, 1.1), color: hexA(white, 0.75), alpha: aM });
+    g.save(); g.globalAlpha = aM;
+    scaleBar(g, W / 2 - 540, H / 2 + 420, 1080, 'ABOUT THE LENGTH OF A BUS',
+      { prog: s.tw(0, 1.9, 1.1), color: hexA(white, 0.72) });
+    g.restore();
   }
 
   // --- L1: parts / suppliers / countries ---------------------------------
@@ -29,9 +35,13 @@ export function coldopen_machine(g, s, ctx) {
       [count(s.t, s.ls(1) + 0.55, 1.9, 5000), 'SUPPLIERS'],
       [count(s.t, s.ls(1) + 0.75, 1.9, 29), 'COUNTRIES'],
     ];
+    g.save(); g.globalAlpha = a1 * clamp(p * 1.2);
+    g.strokeStyle = hexA(white, 0.14); g.lineWidth = 2;
+    g.beginPath(); g.moveTo(SAFE.x, 252); g.lineTo(W - SAFE.x, 252); g.stroke();
+    g.restore();
     items.forEach(([v, k], i) => {
-      readout(g, v, k, SAFE.x + 300 + i * 330, 230, {
-        size: 62, color: i === 0 ? C.yellow : white, alpha: a1 * clamp(p * 1.4 - i * 0.1),
+      readout(g, v, k, SAFE.x + 400 + i * 470, 206, {
+        size: 64, color: i === 0 ? C.yellow : white, alpha: a1 * clamp(p * 1.4 - i * 0.1),
         suffix: i === 1 ? '+' : '',
       });
     });

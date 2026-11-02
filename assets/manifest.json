@@ -1,0 +1,69 @@
+{
+ "assets": {
+  "icon_cpu": {
+   "file": "assets/sourced/icons/icon_cpu.svg",
+   "source": "https://cdn.jsdelivr.net/npm/lucide-static@0.445.0/icons/cpu.svg",
+   "license": "ISC",
+   "attribution": "Lucide",
+   "kind": "svg",
+   "retrieved": "2026-11-02T19:42:43Z"
+  },
+  "icon_chip": {
+   "file": "assets/sourced/icons/icon_chip.svg",
+   "source": "https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/chip.svg",
+   "license": "Apache-2.0",
+   "attribution": "Material Design Icons",
+   "kind": "svg",
+   "retrieved": "2026-11-02T19:42:43Z"
+  },
+  "icon_memory": {
+   "file": "assets/sourced/icons/icon_memory.svg",
+   "source": "https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/memory.svg",
+   "license": "Apache-2.0",
+   "attribution": "Material Design Icons",
+   "kind": "svg",
+   "retrieved": "2026-11-02T19:42:43Z"
+  },
+  "icon_factory": {
+   "file": "assets/sourced/icons/icon_factory.svg",
+   "source": "https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/factory.svg",
+   "license": "Apache-2.0",
+   "attribution": "Material Design Icons",
+   "kind": "svg",
+   "retrieved": "2026-11-02T19:42:43Z"
+  },
+  "icon_ship": {
+   "file": "assets/sourced/icons/icon_ship.svg",
+   "source": "https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/ferry.svg",
+   "license": "Apache-2.0",
+   "attribution": "Material Design Icons",
+   "kind": "svg",
+   "retrieved": "2026-11-02T19:42:43Z"
+  },
+  "icon_car": {
+   "file": "assets/sourced/icons/icon_car.svg",
+   "source": "https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/car-side.svg",
+   "license": "Apache-2.0",
+   "attribution": "Material Design Icons",
+   "kind": "svg",
+   "retrieved": "2026-11-02T19:42:44Z"
+  },
+  "icon_laser": {
+   "file": "assets/sourced/icons/icon_laser.svg",
+   "source": "https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/laser-pointer.svg",
+   "license": "Apache-2.0",
+   "attribution": "Material Design Icons",
+   "kind": "svg",
+   "retrieved": "2026-11-02T19:42:44Z"
+  },
+  "icon_mirror": {
+   "file": "assets/sourced/icons/icon_mirror.svg",
+   "source": "https://cdn.jsdelivr.net/npm/@mdi/svg@7.4.47/svg/mirror-rectangle.svg",
+   "license": "Apache-2.0",
+   "attribution": "Material Design Icons",
+   "kind": "svg",
+   "retrieved": "2026-11-02T19:42:44Z"
+  }
+ },
+ "note": "Every entry carries its licence. Credits are generated from this file."
+}
