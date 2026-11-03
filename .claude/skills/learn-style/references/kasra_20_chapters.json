@@ -1,0 +1,30 @@
+{
+  "compilation": "20 Best Explainer Videos in 2025 | Kasra Design",
+  "youtube": "https://youtu.be/8MjDZtMj3-I",
+  "note": "Chapter times from the uploader's own description. Each clip is a DIFFERENT studio/client piece shown in a showreel -- treat each as its own reference, not one style.",
+  "licence_warning": "These are commercial client films (Airbnb, Netflix, Discord, ServiceNow...). Measure technique only: pacing, placement, transition length. Never reuse their footage, wording, logos or brand hex values.",
+  "clips": [
+    {"i": 0,  "t": "00:00", "name": "Intro",                 "client": "Kasra Design"},
+    {"i": 1,  "t": "00:04", "name": "Airbnb India",          "src": "https://vimeo.com/579660895"},
+    {"i": 2,  "t": "00:17", "name": "Arrow Electronics",     "src": "https://vimeo.com/649123257"},
+    {"i": 3,  "t": "00:31", "name": "Zaptec",                "src": "https://vimeo.com/931314474"},
+    {"i": 4,  "t": "00:43", "name": "Hendrick's Amazonia",   "src": "https://vimeo.com/569777581"},
+    {"i": 5,  "t": "00:56", "name": "Bellefaire",            "src": "https://vimeo.com/485517481"},
+    {"i": 6,  "t": "01:10", "name": "Nansen",                "src": "https://vimeo.com/693182101"},
+    {"i": 7,  "t": "01:23", "name": "Outside Creative Block","src": "https://vimeo.com/1050710359"},
+    {"i": 8,  "t": "01:38", "name": "Christianity Explored", "src": "https://vimeo.com/513045562"},
+    {"i": 9,  "t": "01:52", "name": "ServiceNow",            "src": "https://vimeo.com/838315006"},
+    {"i": 10, "t": "02:05", "name": "Dash 4 Cash",           "src": "https://vimeo.com/1023358247"},
+    {"i": 11, "t": "02:17", "name": "Wix AI Capabilities",   "src": "https://vimeo.com/1009776447"},
+    {"i": 12, "t": "02:31", "name": "Uiflow",                "src": "https://vimeo.com/673104482"},
+    {"i": 13, "t": "02:44", "name": "Amparo & Justice",      "src": "https://vimeo.com/218687129"},
+    {"i": 14, "t": "02:59", "name": "NSW Smart Places",      "src": "https://vimeo.com/553336319"},
+    {"i": 15, "t": "03:13", "name": "Netflix Shirley",       "src": "https://vimeo.com/928008050"},
+    {"i": 16, "t": "03:27", "name": "JRS USA",               "src": "https://vimeo.com/609046909"},
+    {"i": 17, "t": "03:40", "name": "Noom Yoyo",             "src": "https://vimeo.com/676117322"},
+    {"i": 18, "t": "03:53", "name": "Babylon Finance",       "src": "https://vimeo.com/646936260"},
+    {"i": 19, "t": "04:07", "name": "Discord Safety",        "src": "https://vimeo.com/892730567"},
+    {"i": 20, "t": "04:22", "name": "Motion Design School",  "src": "https://vimeo.com/340400881"},
+    {"i": 21, "t": "04:36", "name": "Outro",                 "client": "Kasra Design"}
+  ]
+}

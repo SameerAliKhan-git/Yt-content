@@ -158,6 +158,27 @@ Merging → Rule 5.
 
 ---
 
+## Showreels are not one style
+
+A compilation (e.g. a studio's "20 best explainer videos") is **N different
+films by different teams for different clients**. Measuring the whole file
+averages them into a meaningless middle.
+
+**Do** split it by its chapter list first, then measure each clip as its own
+reference and collate:
+
+```bash
+bash scripts/split_showreel.sh reel.mp4 references/<chapters>.json work/
+bash scripts/run_all.sh work/ 0.30 5
+```
+
+`run_all.sh` writes `collated.json`: the median, min and max of each metric
+across references. **Report the spread, not just the median** — if shot length
+ranges 0.8s to 4.2s across the set, that is the finding, and averaging it hides
+the thing worth knowing.
+
+**Do not** adopt a showreel's palette. Those are twenty different client brands.
+
 ## Writing good rules
 
 A rule must be **executable without rewatching the reference**.
