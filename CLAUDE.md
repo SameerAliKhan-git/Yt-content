@@ -264,6 +264,16 @@ for Shorts repurposing, and keep the code pipeline for 16:9.
 
 ---
 
+## Third-party tools (`tools/`, gitignored — `bash tools/setup.sh`)
+
+- **Null Motion** (MIT, Node 22+, zero deps) — a **study and breakdown viewer,
+  not a motion-graphics generator.** It does not animate anything here and
+  nothing in the render path depends on it. Worth keeping for two reasons: it
+  is a working 254-line reference for the **paused-GSAP-timeline** pattern this
+  project requires (`public/drafts.mjs:240`), and its HyperFrames "beats" idea
+  is a cheap way to block out a script's shots before a full render. MP4 export
+  needs Chrome/Edge (WebCodecs). See `tools/README.md`.
+
 ## Skills installed (58, in `.claude/skills/`)
 
 `remotion-*` (13) · `threejs-*` (13) · `gsap-*` (8) · `yt-*` (11) ·
