@@ -217,7 +217,8 @@ SoC annotations), and cite it in the on-screen source line.
 
 | Thing | Status |
 |---|---|
-| Watching video / YouTube transcripts | **Impossible** — no video capability; YouTube blocks this datacenter IP. Ask for written notes, not links. |
+| Analysing a reference video | **Partly possible now** — `video/analyze_reference.py` splits a film at real scene cuts, builds a numbered contact sheet Claude can actually read, and transcribes with word-level timings. Claude still cannot *play* video; it reads extracted frames. |
+| **Downloading from YouTube** | ❌ **Blocked from this container** — HTTP 429 + "Sign in to confirm you're not a bot" (datacenter IP). Metadata (title/duration) still resolves via yt-dlp. Analyse on a local machine and share the outputs, or drop the file in: **local files analyse fine**. Do not send account cookies through this IP. |
 | Image/video/audio/3D generation | **Higgsfield MCP is connected** (`mcp__Higgsfield__*`) — but the account is on the **free plan with 0 credits**, so no generation will run until it is topped up. Check with `balance` before planning any generated asset, and never spend credits without explicit approval. |
 | Wikimedia Commons | **429 rate-limited** on this shared IP. API worked briefly then throttled. `video/fetch_assets.py` retries with backoff and skips rather than substituting anything unlicensed. |
 | Openverse search | Times out through the proxy. |
@@ -263,6 +264,22 @@ for Shorts repurposing, and keep the code pipeline for 16:9.
 - Fonts are all SIL OFL.
 
 ---
+
+## Reference-video analysis
+
+```bash
+/tmp/vaenv/bin/python video/analyze_reference.py <URL-or-local-path> --out build/refs/<name>
+```
+
+Outputs `shots.json`, `contact_sheet.png`, `transcript.json` (word timings),
+`transcript.txt`, `report.md` (shot count, median shot length, cuts/min, wpm).
+Setup for both this container and a local Windows/Mac machine:
+`docs_setup_video_analysis.md`.
+
+Two traps already hit: **faster-whisper 1.2.1 breaks on PyAV ≥14** (pin
+`av<14`), and the **VAD filter returns zero segments on music-only audio** —
+which is correct, since Whisper otherwise hallucinates "Thank you so much for
+watching!" over music. An empty VAD result now retries once without VAD.
 
 ## Third-party tools (`tools/`, gitignored — `bash tools/setup.sh`)
 
