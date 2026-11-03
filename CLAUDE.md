@@ -186,6 +186,18 @@ seeked to `frame/fps`**, never left running on its own clock. Remotion's
 
 ---
 
+## Style reference library
+
+The channel's standing motion-graphics references are catalogued in
+`research/STYLE_REFERENCES.md` — 20 studio explainer films (Kasra Design
+showreel, with per-clip Vimeo sources). **Technique only**: pacing, transition
+length, caption placement, hook construction. Never their footage, wording,
+logos, fonts or brand colours, and never averaged into one palette — they are
+twenty different clients.
+
+Note these are **16:9 studio explainers**, which matches the channel's existing
+long-form format rather than the 9:16 talking-reel brief raised separately.
+
 ## The style target
 
 From Remotion/Higgsfield's own definition, which matches this build:
